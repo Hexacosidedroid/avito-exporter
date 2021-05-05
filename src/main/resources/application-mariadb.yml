@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: "jdbc:mariadb://${DB_URL}:3306/${DB_NAME}"
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    open-in-view: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+        enable_lazy_load_no_trans: true
+        current_session_context_class: thread
+    hibernate:
+      ddl-auto: update

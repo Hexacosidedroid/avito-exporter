@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: ${PROFILE}
+server:
+  port: 9999
+
+webdriver:
+  path: "C:\\drivers\\chromedriver_win32\\chromedriver.exe"
+#  path: "/opt/spring/driver/chromedriver"
+  browser: ${BROWSER}
+  request:
+    location: ${LOCATION}
+    text: ${SEARCH_QUERY}
+
+logging:
+  config: "classpath:log4j2.yml"
