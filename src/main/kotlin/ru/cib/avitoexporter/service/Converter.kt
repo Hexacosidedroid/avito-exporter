@@ -8,7 +8,7 @@ class Converter {
     fun formatText(searchText: String?) =
         searchText?.replace("^\\s+|\\s+$", "")?.replace(" ", "+")
 
-    fun convertCyrilic(message: String?): String? {
+    fun convertCyrillic(message: String?): String? {
         if (message?.filter { it == 'a'
                     || it == 'e'
                     || it == 'w'
@@ -47,7 +47,7 @@ class Converter {
             this['ч'] = "ch"
             this['ш'] = "sh"
             this['щ'] = "sch"
-            this['ъ'] = "\""
+            this['ъ'] = ""
             this['ы'] = "y"
             this['ь'] = ""
             this['э'] = "e"
@@ -63,6 +63,7 @@ class Converter {
             this['7'] = "7"
             this['8'] = "8"
             this['9'] = "9"
+            this['-'] = "-"
         }
         val charArray = message.decapitalize().toCharArray()
         var translatedString = ""

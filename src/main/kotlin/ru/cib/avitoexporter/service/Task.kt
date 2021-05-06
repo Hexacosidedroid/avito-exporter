@@ -55,7 +55,7 @@ class Task(
 //                window().maximize()
                     timeouts().implicitlyWait(5, TimeUnit.SECONDS)
                 }
-                get("https://www.avito.ru/${converter.convertCyrilic(searchLocation?.decapitalize())}?q=${converter.formatText(searchText)}&s=104")
+                get("https://www.avito.ru/${converter.convertCyrillic(searchLocation?.decapitalize())}?q=${converter.formatText(searchText)}&s=104")
             }
             logger.debug("End of driver initializing")
             return DriverInitializer().apply { driverInstance = driver }
